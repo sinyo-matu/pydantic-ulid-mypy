@@ -1,6 +1,6 @@
 ## disciption
 
-`pydantic-extra-types.ulid.ULID` forces user codebase use `pydantic-extra-types.ulid.ULID` instead of `ulid.ULID` when using mypy.
+`pydantic-extra-types.ulid.ULID` forces user codebase to use `pydantic-extra-types.ulid.ULID` instead of `ulid.ULID` when using mypy.
 
 ## 1. install dependencies
 
