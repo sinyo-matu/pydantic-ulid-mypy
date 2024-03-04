@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "pydantic-ulid-mypy"
+version = "0.1.0"
+description = ""
+authors = ["Yang Qin <sinyo_matu@icloud.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.6.3"
+pydantic-extra-types = "^2.6.0"
+python-ulid = "^2.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.1.1"
+flake8 = "^7.0.0"
+isort = "^5.13.2"
+mypy = "^1.8.0"
+pytest = "^8.0.0"
+pytest-cov = "^4.1.0"
+pytest-mock = "^3.12.0"
+
+[tool.black]
+exclude = """
+(
+    .git
+    | .mypy_cache
+    | .venv
+)
+"""
+line_length = 119
+
+[tool.isort]
+line_length = 119
+profile = "black"
+skip_glob = [".venv/*"]
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_untyped_calls = false
+disallow_untyped_defs = false
+ignore_missing_imports = true
+no_strict_optional = true
+no_warn_no_return = true
+warn_redundant_casts = true
+warn_unreachable = true
